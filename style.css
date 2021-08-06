@@ -52,3 +52,11 @@
     font-size: 80px;
     letter-spacing: 10px;
 }
+
+#play_button:active {
+    width: 570px;
+    height: 135px;
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
