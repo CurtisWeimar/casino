@@ -56,6 +56,9 @@
 #play_button:active {
     width: 570px;
     height: 135px;
+
+    margin-top: 51px;
+
     background-image: url(Assets/Overall_UI/ButtonDown.png);
     background-size: cover;
     background-repeat: no-repeat;
