@@ -1,0 +1,200 @@
+#background {
+    background-image: url(Assets/Overall_UI/Generic_Felt_Mat.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+html{
+    
+}
+
+#title {
+    width: 400px;
+}
+
+#outer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#inner {
+}
+
+#chooseGameTxt{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-size: 60px;
+    position: absolute;
+}
+
+#rouletteIconBtn{
+    width: 300px;
+    position: absolute;
+    margin-left: -40%;
+    margin-top: 10%;
+
+}
+
+#rouletteIconBtn:hover{
+    cursor: pointer;
+
+    -webkit-filter: drop-shadow(2px 2px 0 yellow)
+    drop-shadow(-2px 2px 0 yellow)
+    drop-shadow(2px -2px 0 yellow)
+    drop-shadow(-2px -2px 0 yellow);
+
+filter: drop-shadow(2px 2px 0 yellow)
+drop-shadow(-2px 2px 0 yellow)
+drop-shadow(2px -2px 0 yellow)
+drop-shadow(-2px -2px 0 yellow);
+}
+
+#blackjackIconBtn{
+    width: 300px;
+    position: absolute;
+    margin-left: -10%;
+    margin-top: 10%;
+}
+#blackjackIconBtn:hover{
+    cursor: pointer;
+
+    -webkit-filter: drop-shadow(2px 2px 0 yellow)
+    drop-shadow(-2px 2px 0 yellow)
+    drop-shadow(2px -2px 0 yellow)
+    drop-shadow(-2px -2px 0 yellow);
+
+filter: drop-shadow(2px 2px 0 yellow)
+drop-shadow(-2px 2px 0 yellow)
+drop-shadow(2px -2px 0 yellow)
+drop-shadow(-2px -2px 0 yellow);
+}
+
+#pokerIconBtn{
+    width: 300px;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+#pokerIconBtn:hover{
+    cursor: pointer;
+
+    -webkit-filter: drop-shadow(2px 2px 0 yellow)
+    drop-shadow(-2px 2px 0 yellow)
+    drop-shadow(2px -2px 0 yellow)
+    drop-shadow(-2px -2px 0 yellow);
+
+filter: drop-shadow(2px 2px 0 yellow)
+drop-shadow(-2px 2px 0 yellow)
+drop-shadow(2px -2px 0 yellow)
+drop-shadow(-2px -2px 0 yellow);
+}
+
+#crapsIconBtn{
+    width: 300px;
+    position: absolute;
+    margin-left: -28%;
+    margin-top: 25%;
+}
+#crapsIconBtn:hover{
+    cursor: pointer;
+
+    -webkit-filter: drop-shadow(2px 2px 0 yellow)
+    drop-shadow(-2px 2px 0 yellow)
+    drop-shadow(2px -2px 0 yellow)
+    drop-shadow(-2px -2px 0 yellow);
+
+filter: drop-shadow(2px 2px 0 yellow)
+drop-shadow(-2px 2px 0 yellow)
+drop-shadow(2px -2px 0 yellow)
+drop-shadow(-2px -2px 0 yellow);
+}
+
+#slotsIconBtn{
+    width: 300px;
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 25%;
+}
+
+#slotsIconBtn:hover{
+    -webkit-filter: drop-shadow(2px 2px 0 yellow)
+    drop-shadow(-2px 2px 0 yellow)
+    drop-shadow(2px -2px 0 yellow)
+    drop-shadow(-2px -2px 0 yellow);
+
+filter: drop-shadow(2px 2px 0 yellow)
+drop-shadow(-2px 2px 0 yellow)
+drop-shadow(2px -2px 0 yellow)
+drop-shadow(-2px -2px 0 yellow);
+}
+
+#bank_button {
+    width: 570px;
+    height: 147px;
+
+    margin-top: 40%;
+    margin-left: 10%;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 131px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 80px;
+    letter-spacing: 10px;
+}
+
+#bank_button:active {
+    width: 570px;
+    height: 135px;
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#home_button {
+    width: 570px;
+    height: 147px;
+
+    margin-top: 40%;
+    margin-left: -45%;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 131px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 80px;
+    letter-spacing: 10px;
+}
+
+#home_button:active {
+    width: 570px;
+    height: 135px;
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
