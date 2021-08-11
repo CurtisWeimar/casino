@@ -134,3 +134,67 @@ drop-shadow(-2px 2px 0 yellow)
 drop-shadow(2px -2px 0 yellow)
 drop-shadow(-2px -2px 0 yellow);
 }
+
+#bank_button {
+    width: 570px;
+    height: 147px;
+
+    margin-top: 40%;
+    margin-left: 10%;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 131px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 80px;
+    letter-spacing: 10px;
+}
+
+#bank_button:active {
+    width: 570px;
+    height: 135px;
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#home_button {
+    width: 570px;
+    height: 147px;
+
+    margin-top: 40%;
+    margin-left: -45%;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 131px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 80px;
+    letter-spacing: 10px;
+}
+
+#home_button:active {
+    width: 570px;
+    height: 135px;
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
