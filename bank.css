@@ -1,0 +1,168 @@
+html{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#background {
+    background-image: url(Assets/Overall_UI/Generic_Felt_Mat.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+#title {
+    width: 400px;
+}
+
+#bankTitle{
+    position: absolute;
+    font-size: 100px;
+    color: white;
+}
+
+#casinoChipsBank{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    margin-top: 200px;
+    margin-left: -650px;
+}
+#moneyInBank{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    margin-top: 200px;
+    margin-left: 650px;
+}
+
+#depositAmount{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 500px;
+    height: 120px;
+    color: black;
+    margin-top: 275px;
+    margin-left: -650px;
+    font-size: 75px;
+    position: absolute;
+    text-align: center;
+
+}
+
+#withdrawAmount{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 500px;
+    height: 120px;
+    color: black;
+    margin-top: 275px;
+    margin-left: 650px;
+    font-size: 75px;
+    position: absolute;
+    text-align: center;
+
+}
+
+#depositBtn {
+    width: 570px;
+    height: 147px;
+
+    margin-top: 425px;
+    margin-left: -610px;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 131px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 80px;
+    letter-spacing: 10px;
+}
+
+#depositBtn:active {
+    width: 570px;
+    height: 135px;
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#withdrawBtn {
+    width: 570px;
+    height: 147px;
+
+    margin-top: 425px;
+    margin-left: 50px;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 131px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 80px;
+    letter-spacing: 10px;
+}
+
+#withdrawBtn:active {
+    width: 570px;
+    height: 135px;
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#backBtn {
+    width: 570px;
+    height: 100px;
+
+    margin-top: 680px;
+    margin-left: -750px;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 111px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 80px;
+    letter-spacing: 10px;
+}
+
+#withdrawBtn:active {
+    width: 570px;
+    height: 135px;
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#outer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
