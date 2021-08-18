@@ -26,29 +26,38 @@ bankDeposit.value = 0;
 bankWithdraw.value = 0;
 
 function depositFunc(){
-    cashOnHand -= Number(bankDeposit.value);
-    bankCash += Number(bankDeposit.value);
 
-    casinoChipTxt.innerHTML = `CASINO CHIPS: $${cashOnHand}`;
-
-    if(bankCash < 0)
+    if(bankDeposit.value <= cashOnHand)
     {
-        let tempBank = Math.abs(bankCash);
-        let str = " -$" + tempBank.toString();
-        moneyInBankTxt.innerHTML = "BANK ACCOUNT: " + str.fontcolor("red");
-    }
-    else{    
-        let str = bankCash.toString();
-        moneyInBankTxt.innerHTML = "BANK ACCOUNT: $" + str.fontcolor("white");
-    }
 
-    sessionStorage.setItem('bankCash', bankCash);
-    sessionStorage.setItem('cashOnHand', cashOnHand);
+    
+        cashOnHand -= Number(bankDeposit.value);
+        bankCash += Number(bankDeposit.value);
 
-    depositMax = cashOnHand;
-    bankDeposit.setAttribute("max", depositMax);
-    bankDeposit.value = 0;
-    bankWithdraw.value = 0;
+        casinoChipTxt.innerHTML = `CASINO CHIPS: $${cashOnHand}`;
+
+        if(bankCash < 0)
+        {
+            let tempBank = Math.abs(bankCash);
+            let str = " -$" + tempBank.toString();
+            moneyInBankTxt.innerHTML = "BANK ACCOUNT: " + str.fontcolor("red");
+        }
+        else{    
+            let str = bankCash.toString();
+            moneyInBankTxt.innerHTML = "BANK ACCOUNT: $" + str.fontcolor("white");
+        }
+
+        sessionStorage.setItem('bankCash', bankCash);
+        sessionStorage.setItem('cashOnHand', cashOnHand);
+
+        depositMax = cashOnHand;
+        bankDeposit.setAttribute("max", depositMax);
+        bankDeposit.value = 0;
+        bankWithdraw.value = 0;
+    }
+    else{
+        alert("You are trying to deposit more money than you own! Please try a smaller amount");
+    }
 
 }
 
@@ -69,6 +78,8 @@ function withdrawFunc(){
         moneyInBankTxt.innerHTML = "BANK ACCOUNT: $" + str.fontcolor("white");
     }
 
+    depositMax = cashOnHand;
+    bankDeposit.setAttribute("max", depositMax);
     sessionStorage.setItem('bankCash', bankCash);
     sessionStorage.setItem('cashOnHand', cashOnHand);
 
