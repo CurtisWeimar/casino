@@ -8,8 +8,41 @@
     <title>Poker</title>
 </head>
 <body id="background">
+    <div id="gameBoard"></div>
+    <div id="deck"></div>
     <div id="outer">
-        <img id="pokerTable" src="Assets/Poker/PokerTable.png">
+        <!-- <img id="pokerTable" src="Assets/Poker/PokerTable.png"> -->
+        
+        <div id="topUI">
+            <div id="bets">0</div>
+            <div id="winnings">0</div>
+        </div>
+
+        <div id=cards>
+            <div class="card" id="card1" onclick="cardHold(this)" data-selected="false"></div>
+            <div class="card" id="card2" onclick="cardHold(this)" data-selected="false"></div>
+            <div class="card" id="card3" onclick="cardHold(this)" data-selected="false"></div>
+            <div class="card" id="card4" onclick="cardHold(this)" data-selected="false"></div>
+            <div data-selected="false" class="card" id="card5" onclick="cardHold(this)" ></div>
+        </div>
+        
     </div>
+    <div id="lowUI">
+        <a style="text-decoration: none;" href="gameSelect.html">
+            <div class="noselect" id="backBtn">BACK</div>
+        </a>
+        <div id="chips">
+            <div class="chip" id="chip1" onclick="chipSelect(this)"></div>
+            <div class="chip" id="chip2" onclick="chipSelect(this)"></div>
+            <div class="chip" id="chip3" onclick="chipSelect(this)"></div>
+            <div class="chip" id="chip4" onclick="chipSelect(this)"></div>
+            <div class="chip" id="chip5" onclick="chipSelect(this)"></div>
+            <div class="chip" id="chip6" onclick="chipSelect(this)"></div>
+            <div class="chip" id="chip7" onclick="chipSelect(this)"></div>
+            <div class="chip" id="chip8" onclick="chipSelect(this)"></div>
+        </div>
+        <div class="noselect" id="drawBtn" onclick="dealClick()">DEAL</div>
+    </div>
+    <script src="poker.js"></script>
 </body>
 </html>
