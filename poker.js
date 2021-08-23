@@ -4,6 +4,7 @@ const card3 = document.getElementById("card3");
 const card4 = document.getElementById("card4");
 const card5 = document.getElementById("card5");
 const bets = document.getElementById("bets");
+
 const winnings = document.getElementById("winnings");
 const dealBtn = document.getElementById("drawBtn");
 
@@ -103,7 +104,6 @@ function chipSelect(evt) {
         }
     
         bets.innerHTML = currentBet;
-        console.log(currentBet);
     }
 }
 
@@ -136,7 +136,6 @@ function dealClick() {
 
     //If you have already discarded
     if(reset) {
-        console.log("made it");
         card1.style.backgroundImage="none";
         card2.style.backgroundImage="none";
         card3.style.backgroundImage="none";
@@ -166,7 +165,6 @@ function calculatePayout() {
         hand.push(getRankNum(drawnCards[i].rank));
     }
 
-    //Check straight flush
     //Sort the current hand based off rank
     for(var i = 0; i < 5; i++) {
         for(var x = 0; x < (5 - i - 1); x++) {
@@ -189,8 +187,75 @@ function calculatePayout() {
         }
     }
 
-    console.log(hand);
-    console.log(drawnCards);
+    // console.log(hand);
+    // console.log(drawnCards);
+
+    var testHand = new Array();
+    testHand.push(1);
+    testHand.push(1);
+    testHand.push(3);
+    testHand.push(4);
+    testHand.push(5);
+
+    //Straight flush
+    if(checkStraightFlush(hand, drawnCards)) {
+        return currentBet * 10000;
+    }
+
+    //Four of a kind check
+    //currentBet * 1000
+    if(checkFour(hand)) {
+        return currentBet * 1000;
+    }
+
+    //Full House check
+    //currentBet * 100;
+    if(checkFullHouse(hand)) {
+        return currentBet * 100;
+    }
+
+    //Flush check
+    //currentBet * 50;
+    if(checkFlush(drawnCards)) {
+        return currentBet * 50;
+    }
+
+    //Straight check
+    //currentBet * 25;
+    if(checkStraight(hand)) {
+        return currentBet * 25;
+    }
+
+    //Three-of-a-Kind check
+    //currentBet * 10;
+    if(checkThree(hand)) {
+        return currentBet * 10;
+    }
+
+    //Two Pair check
+    //currentBet * 5;
+    if(checkTwoPair(hand)) {
+        return currentBet * 5;
+    }
+
+    //Pair check
+    //currentBet;
+    console.log(checkPair(testHand));
+    if(checkPair(hand)) {
+        return currentBet * 1;
+    }
+
+    return 0;
+}
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+//            BET CHECKS OH BOY          //
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+//Straight flush
+function checkStraightFlush(hand, drawnCards) {
     var count = 0;
     //Ace shenanigans
     if(hand[0] == 1) {
@@ -201,28 +266,42 @@ function calculatePayout() {
 
     //Actual check
     for(var i = 0; i < 4; i++) {
+        // console.log(`First hand check: ${hand[i + 1] - hand[i] == 1}`);
+        // console.log(`Hand + 1 ${hand[i + 1]}, Hand ${hand[i]}`);
+        // console.log(`Suit check: ${drawnCards[i + 1].suit == drawnCards[i].suit}`);
         if(hand[i + 1] - hand[i] == 1 && drawnCards[i + 1].suit == drawnCards[i].suit) {
             count++;
         }
     }
 
-    if(count == 4) {
-        return currentBet * 10000;
+    // console.log(count);
+    if(count >= 4) {
+        return true;
+    } else {
+        return false;
     }
+}
 
-    //Four of a kind check
+//Four of a kind
+function checkFour(hand) {
     count = 0;
     for(var i = 0; i < 4; i++) {
+        // console.log(`Card 1: ${hand[i]}, Card 2: ${hand[i + 1]}`);
         if(hand[i] == hand[i + 1]) {
             count++;
         }
     }
 
-    if(count == 4) {
-        return currentBet * 1000;
+    // console.log(count);
+    if(count == 3) {
+        return true;
+    } else {
+        return false;
     }
+}
 
-    //Full House check
+//Full House
+function checkFullHouse(hand) {
     count = 0;
     //Check the first three cards
     for(var i = 0; i < 2; i++) {
@@ -231,12 +310,29 @@ function calculatePayout() {
         }
     }
 
-    //Check if first three matched and last two
+    //Check if first three and last two make full house
     if(count == 2 && hand[3] == hand[4]) {
-        return currentBet * 100;
+        return true;
     }
 
-    //Flush check
+    //Check off the last three cards
+    count = 0;
+    for(var i = 4; i > 2; i--) {
+        if(hand[i] == hand[i - 1]) {
+            count++;
+        }
+    }
+    
+    //Check if the last three and first two make full house
+    // console.log(count);
+    // console.log(`First two check: ${hand[0] == hand[1]}`);
+    if(count ==2 && hand[0] == hand[1]) {
+        return true;
+    } else return false;
+}
+
+//Flush
+function checkFlush(drawnCards) {
     count = 0;
     for(var i = 0; i < 4; i++) {
         if(drawnCards[i].suit == drawnCards[i + 1].suit) {
@@ -245,10 +341,12 @@ function calculatePayout() {
     }
 
     if(count == 4) {
-        return currentBet * 50;
-    }
+        return true;
+    } else return false;
+}
 
-    //Straight check
+//Straight
+function checkStraight(hand) {
     count = 0;
     //Ace shenanigans
     if(hand[0] == 1) {
@@ -265,10 +363,12 @@ function calculatePayout() {
     }
 
     if(count == 4) {
-        return currentBet * 25;
-    }
+        return true;
+    } else return false;
+}
 
-    //Three-of-a-Kind check
+//Three of a kind
+function checkThree(hand) {
     count = 0;
     //Check first three
     for(var i = 0; i < 2; i++) {
@@ -278,7 +378,7 @@ function calculatePayout() {
     }
 
     if(count == 2) {
-        return currentBet * 10;
+        return true;
     }
 
     //Check last three
@@ -290,38 +390,56 @@ function calculatePayout() {
     }
 
     if(count == 2) {
-        return currentBet * 10;
-    }
+        return true
+    } else return false;
+}
 
-    //Two Pair check
+//Check two pair
     //Fuck it nested loop time
+function checkTwoPair(hand) {
+    var pairsCount = 0;
     var checkedNum = 0;
     var currentNum = 0;
     for(var i = 0; i < 4; i++) {
+        count = 0;
+        // console.log(`Checked before: ${hand[i]} = ${hand[i] == checkedNum}`);
         if(hand[i] != checkedNum) {
-            hand[i] == currentNum;
+            currentNum = hand[i];
+            // console.log(`New check: ${currentNum}`);
             for(var x = 0; x < 5; x++) {
                 if(hand[x] == currentNum) {
                     count++;
                     checkedNum = currentNum;
                 }
             }
-        }
-    }
-
-    if(count >= 2) {
-        return currentBet * 5;
-    }
-
-    //Pair check
-    for(var i = 0; i < 4; i++) {
-        for(var x = 0; x < 5; x++) {
-            if(hand[i] == hand[x]) {
-                return currentBet;
+            if(count == 2) {
+                pairsCount++;
             }
         }
     }
+
+    // console.log(pairsCount);
+    if(pairsCount == 2) {
+        return true;
+    } else return false;
 }
+
+//Pair
+function checkPair(hand) {
+    for(var i = 0; i < 4; i++) {
+        for(var x = 0; x < 5; x++) {
+            // console.log(`Checking ${hand[i]} and ${hand[x]}`);
+            if(hand[i] == hand[x] && x != i) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+//////////////////////////////////////
+//           CARD FUNCTIONS         //
+//////////////////////////////////////
 
 function resetGame() {
     draws = 0;
@@ -333,8 +451,7 @@ function resetGame() {
         drawnCards.splice(i, 1);
     }
     currentBet = 0;
-    bets.innerHTML = 0;
-    winnings.innerHTML = 0;
+    bets.innerHTML = 0; 
 }
 
 function cardHold(evt) {
@@ -344,12 +461,12 @@ function cardHold(evt) {
         heldCards -= 1;
         drawnCards[evt.id.slice(-1) - 1].held = false;
         evt.selected = false;
-    } else if(heldCards < 3) {
+    } else {
         heldCards += 1;
         drawnCards[evt.id.slice(-1) - 1].held = true;
         evt.selected = true;
     }
-    console.log(evt.selected);
+    // console.log(evt.selected);
 }
 
 function randomCard(index) {
