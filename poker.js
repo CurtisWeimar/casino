@@ -4,9 +4,15 @@ const card3 = document.getElementById("card3");
 const card4 = document.getElementById("card4");
 const card5 = document.getElementById("card5");
 const bets = document.getElementById("bets");
+const bank = document.getElementById("bank");
+
 
 const winnings = document.getElementById("winnings");
 const dealBtn = document.getElementById("drawBtn");
+
+let currentBalance = Number(sessionStorage.getItem('cashOnHand'));
+
+bank.innerHTML = `$${currentBalance}`;
 
 class Card {
     held = false;
@@ -50,13 +56,6 @@ shuffle(deck);
 
 function resetDeck() {
     usedCards.forEach(card => deck.push(card))
-    //Add each card that isn't currently held
-    // usedCards.forEach(function(card) {
-    //     if(!card.held) {
-    //         deck.push(card);
-    //     }
-    // });
-
     shuffle(deck);
 }
 
@@ -78,41 +77,55 @@ function chipSelect(evt) {
     if(draws != 0) {
         switch(evt.id.slice(-1)) {
             case "1":
-                currentBet += 1;
+                bet(1);
                 break;
             case "2":
-                currentBet += 5;
+                bet(5);
                 break;
             case "3":
-                currentBet += 10;
+                bet(10);
                 break;
             case "4":
-                currentBet += 20;
+                bet(20);
                 break;
             case "5":
-                currentBet += 50;
+                bet(50);
                 break;
             case "6":
-                currentBet += 100;
+                bet(100);
                 break;
             case "7":
-                currentBet += 1000;
+                bet(1000);
                 break;
             case "8":
-                currentBet += 5000;
+                bet(5000);
                 break;
         }
-    
-        bets.innerHTML = currentBet;
     }
 }
 
 var reset = false;
 
+function bet(amount) {
+    if(amount <= currentBalance) {
+        currentBet += amount;
+        currentBalance -= amount;
+        sessionStorage.setItem('cashOnHand', currentBalance);
+        bank.innerHTML = `$${currentBalance}`;
+        bets.innerHTML = `$${currentBet}`;
+    } else if(amount > currentBalance) {
+        alert("Not enough money!");
+    }
+}
+
 //Deal new cards click
 function dealClick() {
     //If no cards have been drawn yet
     if(draws == 0) {
+        //Ye olde ante
+        if(currentBet == 0) {
+            bet(5);
+        }
         for(var i = 0; i < 5; i++) {
             randomCard(i);
         }
@@ -128,7 +141,10 @@ function dealClick() {
         }
 
         var winAmount = calculatePayout();
+        currentBalance += winAmount;
         winnings.innerHTML = parseInt(winnings.innerHTML) + winAmount;
+        sessionStorage.setItem('cashOnHand', currentBalance);
+        bank.innerHTML = `$${currentBalance}`;
 
         dealBtn.innerHTML = "RESET";
         draws += 1;
@@ -151,7 +167,7 @@ function dealClick() {
     }
 }
 
-//So much :( and some doesn't work
+//So much and it works :)
 function calculatePayout() {
     var payout = 0;
 
