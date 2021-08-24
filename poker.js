@@ -6,6 +6,7 @@ const card5 = document.getElementById("card5");
 const bets = document.getElementById("bets");
 const bank = document.getElementById("bank");
 
+
 const winnings = document.getElementById("winnings");
 const dealBtn = document.getElementById("drawBtn");
 
