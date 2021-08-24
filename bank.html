@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bank.css">
+    <title>Bank</title>
+</head>
+<body id="background">
+    <div id="outer">
+        <div id="bankTitle">WELCOME TO THE BANK</div>
+        <div id="casinoChipsBank"></div>
+        <div id="moneyInBank"></div>
+        <input type="number" id="depositAmount" min="0" max="100">
+        <input type="number" id="withdrawAmount" min="0">
+        <a style="text-decoration: none;" onclick="depositFunc()">
+            <div class="noselect" id="depositBtn">DEPOSIT</div>
+        </a>
+        <a style="text-decoration: none;" onclick="withdrawFunc()">
+            <div class="noselect" id="withdrawBtn">WITHDRAW</div>
+        </a>
+        <a style="text-decoration: none;" href="gameSelect.html">
+            <div class="noselect" id="backBtn">BACK</div>
+        </a>
+    </div>
+    <script src="bank.js"></script>
+</body>
+</html>
