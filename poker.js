@@ -54,7 +54,9 @@ for(var i = 0; i < 4; i++) {
 shuffle(deck);
 
 function resetDeck() {
-    usedCards.forEach(card => deck.push(card))
+    //Dunk every used card back into the deck
+    usedCards.forEach(card => deck.push(card));
+    usedCards.splice(0); //Remove all cards from usedCards
     shuffle(deck);
 }
 
@@ -205,12 +207,12 @@ function calculatePayout() {
     // console.log(hand);
     // console.log(drawnCards);
 
-    var testHand = new Array();
-    testHand.push(1);
-    testHand.push(1);
-    testHand.push(3);
-    testHand.push(4);
-    testHand.push(5);
+    // var testHand = new Array();
+    // testHand.push(1);
+    // testHand.push(1);
+    // testHand.push(3);
+    // testHand.push(4);
+    // testHand.push(5);
 
     //Straight flush
     if(checkStraightFlush(hand, drawnCards)) {
@@ -255,7 +257,6 @@ function calculatePayout() {
 
     //Pair check
     //currentBet;
-    console.log(checkPair(testHand));
     if(checkPair(hand)) {
         return currentBet * 1;
     }
@@ -268,6 +269,8 @@ function calculatePayout() {
 //            BET CHECKS OH BOY          //
 ///////////////////////////////////////////
 ///////////////////////////////////////////
+
+//TODO: Royal Flush
 
 //Straight flush
 function checkStraightFlush(hand, drawnCards) {
@@ -461,10 +464,18 @@ function resetGame() {
     dealBtn.innerHTML = "DEAL";
     reset = false;
     heldCards = 0;
-    for(var i = 0; i < 5; i++) {
-        usedCards.push(drawnCards[i]);
-        drawnCards.splice(i, 1);
-    }
+    console.log(`Old used cards length: ${usedCards.length}`);
+    //Take all the cards from the current hand and discard them
+        //In the grossest way possible
+    drawnCards.forEach(card => usedCards.push(card));
+    drawnCards.splice(0);
+    // for(var i = 0; i < 5; i++) {
+    //     console.log(`Pushing ${drawnCards[i].rank}, ${drawnCards[i].suit}`);
+    //     usedCards.push(drawnCards[i]);
+    //     drawnCards.splice(i, 1);
+    // }
+    console.log(`New used cards length: ${usedCards.length}`);
+    // resetDeck();
     currentBet = 0;
     bets.innerHTML = 0; 
 }
@@ -487,7 +498,9 @@ function cardHold(evt) {
 function randomCard(index) {
     
     var randomCard = drawCard(index);
-
+    // console.log(randomCard);
+    // console.log(`Deck length: ${deck.length}`);
+    // console.log(`Deck: ${deck}`);
     //Get the string representation for the card
     var cardString = getCardString(randomCard.rank, randomCard.suit);
 
@@ -532,6 +545,7 @@ function drawCard(index) {
     } else {
         //Else discard the current card before drawing
         usedCards.push(drawnCards[index]);
+        // console.log(`Discarding ${drawnCards[index].rank}, ${drawnCards[index].suit}`);
         drawnCards[index] = deck.splice(deck.indexOf(randomCard), 1)[0];
     }
 
