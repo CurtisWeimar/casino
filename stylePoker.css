@@ -79,6 +79,34 @@ drop-shadow(-2px -2px 0 yellow);
     drop-shadow(-2px -2px 0 yellow); */
 }
 
+.card-active {
+    width: 140px;
+    height: 190px;
+    /* flex: 1; */
+    flex-direction: row;
+    -webkit-filter: drop-shadow(2px 2px 0 yellow)
+    drop-shadow(-2px 2px 0 yellow)
+    drop-shadow(2px -2px 0 yellow)
+    drop-shadow(-2px -2px 0 yellow);
+    
+    filter: drop-shadow(2px 2px 0 yellow)
+    drop-shadow(-2px 2px 0 yellow)
+    drop-shadow(2px -2px 0 yellow)
+    drop-shadow(-2px -2px 0 yellow);
+}
+
+.card:hover {
+    -webkit-filter: drop-shadow(2px 2px 0 yellow)
+    drop-shadow(-2px 2px 0 yellow)
+    drop-shadow(2px -2px 0 yellow)
+    drop-shadow(-2px -2px 0 yellow);
+
+filter: drop-shadow(2px 2px 0 yellow)
+drop-shadow(-2px 2px 0 yellow)
+drop-shadow(2px -2px 0 yellow)
+drop-shadow(-2px -2px 0 yellow);
+}
+
 #cards {
     display: flex;
     flex-direction: row;

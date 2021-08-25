@@ -488,10 +488,44 @@ function cardHold(evt) {
         heldCards -= 1;
         drawnCards[evt.id.slice(-1) - 1].held = false;
         evt.selected = false;
+        switch(evt.id.slice(-1)) {
+            case "1":
+                card1.classList.toggle("card-active");
+                break;
+            case "2":
+                card2.classList.toggle("card-active");
+                break;
+            case "3":
+                card3.classList.toggle("card-active");
+                break;
+            case "4":
+                card4.classList.toggle("card-active");
+                break;
+            case "5":
+                card5.classList.toggle("card-active");
+                break;
+        }
     } else {
         heldCards += 1;
         drawnCards[evt.id.slice(-1) - 1].held = true;
         evt.selected = true;
+        switch(evt.id.slice(-1)) {
+            case "1":
+                card1.classList.toggle("card-active");
+                break;
+            case "2":
+                card2.classList.toggle("card-active");
+                break;
+            case "3":
+                card3.classList.toggle("card-active");
+                break;
+            case "4":
+                card4.classList.toggle("card-active");
+                break;
+            case "5":
+                card5.classList.toggle("card-active");
+                break;
+        }
     }
     // console.log(evt.selected);
 }
