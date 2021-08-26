@@ -39,3 +39,355 @@
 #rouletteTable {
     width: 1000px;
 }
+
+.box {
+    border:0px solid #000000;
+    width: 65px;
+    height: 92px;
+}
+
+#box3 {
+    position:fixed; left:626px; top:11px;
+}
+
+#box6 {
+    position:fixed; left:695px; top:11px;
+}
+
+#box9 {
+    position:fixed; left:764px; top:11px;
+}
+
+#box12 {
+    position:fixed; left:833px; top:11px;
+}
+
+#box15 {
+    position:fixed; left:902px; top:11px;
+}
+
+#box18 {
+    position:fixed; left:971px; top:11px;
+}
+
+#box21 {
+    position:fixed; left:1041px; top:11px;
+}
+
+#box24 {
+    position:fixed; left:1110px; top:11px;
+}
+
+#box27 {
+    position:fixed; left:1179px; top:11px;
+}
+
+#box30 {
+    position:fixed; left:1248px; top:11px;
+}
+
+#box33 {
+    position:fixed; left:1317px; top:11px;
+}
+
+#box36 {
+    position:fixed; left:1386px; top:11px;
+}
+
+#box2-1_1 {
+    position:fixed; left:1455px; top:11px;
+}
+/*----------------------------------------*/
+#box2 {
+    position:fixed; left:626px; top:109px;
+}
+
+#box5 {
+    position:fixed; left:695px; top:109px;
+}
+
+#box8 {
+    position:fixed; left:764px; top:109px;
+}
+
+#box11 {
+    position:fixed; left:833px; top:109px;
+}
+
+#box14 {
+    position:fixed; left:902px; top:109px;
+}
+
+#box17 {
+    position:fixed; left:971px; top:109px;
+}
+
+#box20 {
+    position:fixed; left:1041px; top:109px;
+}
+
+#box23 {
+    position:fixed; left:1110px; top:109px;
+}
+
+#box26 {
+    position:fixed; left:1179px; top:109px;
+}
+
+#box29 {
+    position:fixed; left:1248px; top:109px;
+}
+
+#box32 {
+    position:fixed; left:1317px; top:109px;
+}
+
+#box35 {
+    position:fixed; left:1386px; top:109px;
+}
+
+#box2-1_2 {
+    position:fixed; left:1455px; top:109px;
+}
+/*----------------------------------------*/
+#box1 {
+    position:fixed; left:626px; top:205px;
+}
+
+#box4 {
+    position:fixed; left:695px; top:205px;
+}
+
+#box7 {
+    position:fixed; left:764px; top:205px;
+}
+
+#box10 {
+    position:fixed; left:833px; top:205px;
+}
+
+#box13 {
+    position:fixed; left:902px; top:205px;
+}
+
+#box16 {
+    position:fixed; left:971px; top:205px;
+}
+
+#box19 {
+    position:fixed; left:1041px; top:205px;
+}
+
+#box22 {
+    position:fixed; left:1110px; top:205px;
+}
+
+#box25 {
+    position:fixed; left:1179px; top:205px;
+}
+
+#box28 {
+    position:fixed; left:1248px; top:205px;
+}
+
+#box31 {
+    position:fixed; left:1317px; top:205px;
+}
+
+#box34 {
+    position:fixed; left:1386px; top:205px;
+}
+
+#box2-1_3 {
+    position:fixed; left:1455px; top:205px;
+}
+/*----------------------------------------*/
+#box1st12 {
+    position:fixed; left:626px; top:303px;
+    width: 273px;
+    height: 67px;
+}
+#box2nd12 {
+    position:fixed; left:902px; top:303px;
+    width: 273px;
+    height: 67px;
+}
+#box3rd12 {
+    position:fixed; left:1179px; top:303px;
+    width: 273px;
+    height: 67px;
+}
+/*----------------------------------------*/
+#box1-18 {
+    position:fixed; left:626px; top:373px;
+    width: 135px;
+    height: 67px;
+}
+#boxEven {
+    position:fixed; left:764px; top:373px;
+    width: 135px;
+    height: 67px;
+}
+#boxRed {
+    position:fixed; left:902px; top:373px;
+    width: 135px;
+    height: 67px;
+}
+#boxBlack {
+    position:fixed; left:1041px; top:373px;
+    width: 135px;
+    height: 67px;
+}
+#boxOdd {
+    position:fixed; left:1179px; top:373px;
+    width: 135px;
+    height: 67px;
+}
+#box19-36 {
+    position:fixed; left:1317px; top:373px;
+    width: 135px;
+    height: 67px;
+}
+#box0 {
+    position:fixed; left:525px; top:11px;
+    width: 97px;
+    height: 285px;
+}
+
+#chips {
+    width: 800px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.chip{
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#chip1 {
+    background-image: url(Assets/Overall_UI/Chip1.png);
+}
+
+#chip2 {
+    background-image: url(Assets/Overall_UI/Chip5.png);
+}
+
+#chip3 {
+    background-image: url(Assets/Overall_UI/Chip10.png);
+}
+
+#chip4 {
+    background-image: url(Assets/Overall_UI/Chip20.png);
+}
+
+#chip5 {
+    background-image: url(Assets/Overall_UI/Chip50.png);
+}
+
+#chip6 {
+    background-image: url(Assets/Overall_UI/Chip100.png);
+}
+
+#chip7 {
+    background-image: url(Assets/Overall_UI/Chip1000.png);
+}
+
+#chip8 {
+    background-image: url(Assets/Overall_UI/Chip5000.png);
+}
+
+#backBtn {
+    width: 285px;
+    height: 73px;
+
+    margin-top: 40px;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 73px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+
+#backBtn:active {
+    width: 285px;
+    height: 67px;
+
+    margin-top: 51px;
+
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#spinBtn {
+    width: 285px;
+    height: 73px;
+
+    margin-top: 40px;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 73px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+
+#spinBtn:active {
+    width: 285px;
+    height: 67px;
+
+    margin-top: 51px;
+
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#lowUI {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    position: absolute;
+    top: 1000;
+}
+
+div.box:hover { 
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: lime;
+
+    cursor: pointer; 
+}

@@ -11,12 +11,183 @@
     <div id="outer">
         <div class="row">
             <div class="column">
-                <img id="rouletteWheel" src="Assets/Roulette/RouletteWheel_SingleZero.png">
+                <img id="rouletteWheel" onclick="spin()" src="Assets/Roulette/RouletteWheel_SingleZero.png">
             </div>
             <div class="column">
                 <img id="rouletteTable" src="Assets/Roulette/Roulette_SingleZero.png">
             </div>
-          </div>
+        </div>
     </div>
+    <div class="box" id="box3" onclick="betOn3()">
+                
+    </div>
+    <div class="box" id="box6" onclick="betOn6()">
+                
+    </div>
+    <div class="box" id="box9" onclick="betOn9()">
+                
+    </div>
+    <div class="box" id="box12" onclick="betOn12()">
+                
+    </div>
+    <div class="box" id="box15" onclick="betOn15()">
+                
+    </div>
+    <div class="box" id="box18" onclick="betOn18()">
+                
+    </div>
+    <div class="box" id="box21" onclick="betOn21()">
+                
+    </div>
+    <div class="box" id="box24" onclick="betOn24()">
+                
+    </div>
+    <div class="box" id="box27" onclick="betOn27()">
+                
+    </div>
+    <div class="box" id="box30" onclick="betOn30()">
+                
+    </div>
+    <div class="box" id="box33" onclick="betOn33()">
+                
+    </div>
+    <div class="box" id="box36" onclick="betOn36()">
+                
+    </div>
+    <div class="box" id="box2-1_1" onclick="betOn1stCol()">
+                
+    </div>
+    <!------------------------------------->
+    <div class="box" id="box2" onclick="betOn2()">
+                
+    </div>
+    <div class="box" id="box5" onclick="betOn5()">
+                
+    </div>
+    <div class="box" id="box8" onclick="betOn8()">
+                
+    </div>
+    <div class="box" id="box11" onclick="betOn11()">
+                
+    </div>
+    <div class="box" id="box14" onclick="betOn14()">
+                
+    </div>
+    <div class="box" id="box17" onclick="betOn17()">
+                
+    </div>
+    <div class="box" id="box20" onclick="betOn20()">
+                
+    </div>
+    <div class="box" id="box23" onclick="betOn23()">
+                
+    </div>
+    <div class="box" id="box26" onclick="betOn26()">
+                
+    </div>
+    <div class="box" id="box29" onclick="betOn29()">
+                
+    </div>
+    <div class="box" id="box32" onclick="betOn32()">
+                
+    </div>
+    <div class="box" id="box35" onclick="betOn35()">
+                
+    </div>
+    <div class="box" id="box2-1_2" onclick="betOn2ndCol()">
+                
+    </div>
+    <!------------------------------------->
+    <div class="box" id="box1" onclick="betOn1()">
+                
+    </div>
+    <div class="box" id="box4" onclick="betOn4()">
+                
+    </div>
+    <div class="box" id="box7" onclick="betOn7()">
+                
+    </div>
+    <div class="box" id="box10" onclick="betOn10()">
+                
+    </div>
+    <div class="box" id="box13" onclick="betOn13()">
+                
+    </div>
+    <div class="box" id="box16" onclick="betOn16()">
+                
+    </div>
+    <div class="box" id="box19" onclick="betOn19()">
+                
+    </div>
+    <div class="box" id="box22" onclick="betOn22()">
+                
+    </div>
+    <div class="box" id="box25" onclick="betOn25()">
+                
+    </div>
+    <div class="box" id="box28" onclick="betOn28()">
+                
+    </div>
+    <div class="box" id="box31" onclick="betOn31()">
+                
+    </div>
+    <div class="box" id="box34" onclick="betOn34()">
+                
+    </div>
+    <div class="box" id="box2-1_3" onclick="betOn3rdCol()">
+                
+    </div>
+    <!------------------------------------->
+    <div class="box" id="box1st12" onclick="betOn1st12()">
+                
+    </div>
+    <div class="box" id="box2nd12" onclick="betOn2nd12()">
+                
+    </div>
+    <div class="box" id="box3rd12" onclick="betOn3rd12()">
+                
+    </div>
+    <!------------------------------------->
+    <div class="box" id="box1-18" onclick="betOn1to18()">
+                
+    </div>
+    <div class="box" id="boxEven" onclick="betOnEven()">
+                
+    </div>
+    <div class="box" id="boxRed" onclick="betOnRed()">
+                
+    </div>
+    <div class="box" id="boxBlack" onclick="betOnBlack()">
+                
+    </div>
+    <div class="box" id="boxOdd" onclick="betOnOdd()">
+                
+    </div>
+    <div class="box" id="box19-36" onclick="betOn19to36()">
+                
+    </div>
+    <!------------------------------------->
+    <div class="box" id="box0" onclick="betOn0()">
+                
+    </div>
+
+    <div id="lowUI">
+        <a style="text-decoration: none;" href="gameSelect.html">
+            <div class="noselect" id="backBtn">BACK</div>
+        </a>
+        <div id="chips">
+            <div class="chip" id="chip1" onclick="bet1()"></div>
+            <div class="chip" id="chip2" onclick="bet5()"></div>
+            <div class="chip" id="chip3" onclick="bet10()"></div>
+            <div class="chip" id="chip4" onclick="bet20()"></div>
+            <div class="chip" id="chip5" onclick="bet50()"></div>
+            <div class="chip" id="chip6" onclick="bet100()"></div>
+            <div class="chip" id="chip7" onclick="bet1000()"></div>
+            <div class="chip" id="chip8" onclick="bet5000()"></div>
+        </div>
+        <div class="noselect" id="spinBtn" onclick="spin()">SPIN</div>
+    </div>
+
+    <script src="roulette.js"></script>
 </body>
 </html>
