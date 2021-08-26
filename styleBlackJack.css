@@ -10,6 +10,7 @@
     width: 400px;
 }
 
+
 #outer {
     position: relative;
     display: flex;
@@ -24,6 +25,409 @@
     width: 1000px;
 }
 
-#inner {
+#deck{
+    margin-left: 1125px;
+    margin-top: -615px;
+    position: absolute;
+}
 
+#deckcount{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 15px;
+    font-size: 40px;
+}
+
+#deckImg{
+    width: 70px;
+    height: 110px;
+    
+    
+}
+
+#topUI {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: -50px;
+}
+
+#bets {
+    width: 300px;
+
+    font-size: 48;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+
+#winnings {
+    width: 300px;
+
+    font-size: 48;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+
+
+#bank {
+    float: right;
+    margin-right: 135px;
+    margin-top: -50px;
+
+    font-size: 48;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+
+#lowCont {
+    height: 20vh;
+    width: 100%;
+    position: absolute;
+    /*
+    border-width: 2px;
+    border-color: black;
+    border-style: dashed;
+    */
+    margin-top: 575px;
+}
+
+#lowUI {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    position: absolute;
+    bottom: 0;
+}
+
+#chips {
+    width: 800px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.chip{
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#chip1 {
+    background-image: url(Assets/Overall_UI/Chip1.png);
+}
+
+#chip2 {
+    background-image: url(Assets/Overall_UI/Chip5.png);
+}
+
+#chip3 {
+    background-image: url(Assets/Overall_UI/Chip10.png);
+}
+
+#chip4 {
+    background-image: url(Assets/Overall_UI/Chip20.png);
+}
+
+#chip5 {
+    background-image: url(Assets/Overall_UI/Chip50.png);
+}
+
+#chip6 {
+    background-image: url(Assets/Overall_UI/Chip100.png);
+}
+
+#chip7 {
+    background-image: url(Assets/Overall_UI/Chip1000.png);
+}
+
+#chip8 {
+    background-image: url(Assets/Overall_UI/Chip5000.png);
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+#backBtn {
+    width: 285px;
+    height: 73px;
+
+    margin-top: 40px;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 73px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+
+#backBtn:active {
+    width: 285px;
+    height: 67px;
+
+    margin-top: 51px;
+
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hitBtn {
+    width: 285px;
+    height: 73px;
+
+    margin-top: 40px;
+    margin-left: 1162px;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 73px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 40px;
+    letter-spacing: 10px;
+    visibility: hidden;
+}
+
+#hitBtn:active {
+    width: 285px;
+    height: 67px;
+
+    margin-top: 51px;
+
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#standBtn {
+    width: 285px;
+    height: 73px;
+
+    margin-top: -120px;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 73px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 40px;
+    letter-spacing: 10px;
+    visibility: hidden;
+    
+}
+
+#standBtn:active {
+    width: 285px;
+    height: 67px;
+
+    margin-top: -115px;
+
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#playBtn {
+    width: 285px;
+    height: 73px;
+
+    margin-top: -30px;
+    margin-left: 1162px;
+
+    background-image: url(Assets/Overall_UI/ButtonUp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    vertical-align: middle;
+
+    /* line-height: 120px; */
+    text-align: center;
+    line-height: 73px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+
+#playBtn:active {
+    width: 285px;
+    height: 67px;
+
+    margin-top: -25px;
+
+    background-image: url(Assets/Overall_UI/ButtonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    visibility: visible;
+}
+
+
+
+#player{
+    margin-left: 725px;
+    margin-top: -170px;
+}
+
+#playerScore{
+    position: absolute;
+    margin-left: -60px;
+    margin-top: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-size: 40px;
+    visibility: hidden;
+}
+
+#pCard1{
+    width: 70px;
+    height: 110px;
+    position: absolute;
+    visibility: hidden;
+}
+#pCard2{
+    width: 70px;
+    height: 110px;
+    margin-left: 20px;
+    margin-top: 20px;
+    position: absolute;
+    visibility: hidden;
+}
+#pCard3{
+    width: 70px;
+    height: 110px;
+    margin-left: 40px;
+    margin-top: 40px;
+    position: absolute;
+    visibility: hidden;
+}
+#pCard4{
+    width: 70px;
+    height: 110px;
+    margin-left: 60px;
+    margin-top: 60px;
+    position: absolute;
+    visibility: hidden;
+}
+#pCard5{
+    width: 70px;
+    height: 110px;
+    margin-left: 80px;
+    margin-top: 80px;
+    position: absolute;
+    visibility: hidden;
+}
+
+#house{
+    margin-left: 725px;
+    margin-top: -628px;
+}
+
+#houseScore{
+    position: absolute;
+    margin-left: -60px;
+    margin-top: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-size: 40px;
+    visibility: hidden;
+}
+
+#hCard1{
+    width: 70px;
+    height: 110px;
+    position: absolute;
+    visibility: hidden;
+}
+#hCard2{
+    width: 70px;
+    height: 110px;
+    margin-left: 20px;
+    margin-top: 20px;
+    position: absolute;
+    visibility: hidden;
+}
+#hCard3{
+    width: 70px;
+    height: 110px;
+    margin-left: 40px;
+    margin-top: 40px;
+    position: absolute;
+    visibility: hidden;
+}
+#hCard4{
+    width: 70px;
+    height: 110px;
+    margin-left: 60px;
+    margin-top: 60px;
+    position: absolute;
+    visibility: hidden;
+}
+#hCard5{
+    width: 70px;
+    height: 110px;
+    margin-left: 80px;
+    margin-top: 80px;
+    position: absolute;
+    visibility: hidden;
 }
