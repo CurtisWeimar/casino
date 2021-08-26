@@ -11,6 +11,58 @@
     <div id="outer">
         <img id="blackJackTable" src="Assets/BlackJack/BlackJackTable.png">
     </div>
+
+    <div id="topUI">
+        <div id="bets">$0</div>
+        <div id="winnings">$0</div>
+    </div>
+
+    <div id="deck" class="deck">
+        <div id="deckcount">52</div>
+        <img id="deckImg" src="Assets/BlackJack/Cards/cardBack_blue2.png">
+    </div>
+
+    <div id="bank">$0</div>
+
+    
+    <div id="player">
+        <h3 id="playerScore">0</h3>
+        <img id="pCard1" src="Assets/BlackJack/Cards/cardBack_blue2.png">
+        <img id="pCard2" src="Assets/BlackJack/Cards/cardBack_blue2.png">
+        <img id="pCard3" src="Assets/BlackJack/Cards/cardBack_blue2.png">
+        <img id="pCard4" src="Assets/BlackJack/Cards/cardBack_blue2.png">
+        <img id="pCard5" src="Assets/BlackJack/Cards/cardBack_blue2.png">
+    </div>
+    
+    <div id="house">
+        <h3 id="houseScore">0</h3>
+        <img id="hCard1" src="Assets/BlackJack/Cards/cardBack_blue2.png">
+        <img id="hCard2" src="Assets/BlackJack/Cards/cardBack_blue2.png">
+        <img id="hCard3" src="Assets/BlackJack/Cards/cardBack_blue2.png">
+        <img id="hCard4" src="Assets/BlackJack/Cards/cardBack_blue2.png">
+        <img id="hCard5" src="Assets/BlackJack/Cards/cardBack_blue2.png">
+    </div>
+    
+    <div id=lowCont>
+        <div id="lowUI">
+            <a style="text-decoration: none;" href="gameSelect.html">
+                <div class="noselect" id="backBtn">BACK</div>
+            </a>
+            <div id="chips">
+                <div class="chip" id="chip1" onclick="chipSelect(this)"></div>
+                <div class="chip" id="chip2" onclick="chipSelect(this)"></div>
+                <div class="chip" id="chip3" onclick="chipSelect(this)"></div>
+                <div class="chip" id="chip4" onclick="chipSelect(this)"></div>
+                <div class="chip" id="chip5" onclick="chipSelect(this)"></div>
+                <div class="chip" id="chip6" onclick="chipSelect(this)"></div>
+                <div class="chip" id="chip7" onclick="chipSelect(this)"></div>
+                <div class="chip" id="chip8" onclick="chipSelect(this)"></div>
+            </div>
+            <div class="noselect" id="standBtn" onclick="stand()">STAND</div>
+            <div class="noselect" id="hitBtn" onclick="hitMe()">HIT</div>
+            <div class="noselect" id="playBtn" onclick="startblackjack()">DEAL</div>
+        </div>
+    </div>
     <script src="blackJack.js"></script>
 </body>
 </html>

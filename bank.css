@@ -125,7 +125,7 @@ html{
 }
 
 #backBtn {
-    width: 570px;
+    width: 388px;
     height: 100px;
 
     margin-top: 680px;
@@ -139,7 +139,7 @@ html{
 
     /* line-height: 120px; */
     text-align: center;
-    line-height: 111px;
+    line-height: 90px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: black;
     -webkit-text-stroke-width: 3px;
@@ -148,9 +148,9 @@ html{
     letter-spacing: 10px;
 }
 
-#withdrawBtn:active {
-    width: 570px;
-    height: 135px;
+#backBtn:active {
+    width: 388px;
+    height: 92px;
     background-image: url(Assets/Overall_UI/ButtonDown.png);
     background-size: cover;
     background-repeat: no-repeat;
