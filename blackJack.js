@@ -72,6 +72,7 @@ function chipSelect(evt) {
 }
 
 function bet(amount) {
+    
     tempCurrentBet += amount;
     console.log(tempCurrentBet);
     if(tempCurrentBet <= originalAmount) {
@@ -344,6 +345,7 @@ function end()
     bankTxt.innerHTML = `$${cashOnHand}`;
     isStarted = false;
     players = new Array();
+    originalAmount = cashOnHand;
 
     currentBet = 0;
     winnings = 0;
