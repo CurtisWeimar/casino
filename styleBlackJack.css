@@ -431,3 +431,15 @@
     position: absolute;
     visibility: hidden;
 }
+
+#result{
+    position: absolute;
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    margin-left: 600px;
+    margin-top: -400px;
+    background-color: #000000C0;
+    background-size: 200px;
+    visibility: hidden;
+}

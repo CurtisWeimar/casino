@@ -34,6 +34,8 @@ let houseCardCount = 1;
 let playerScoreTxt = document.getElementById("playerScore");
 let houseScoreTxt = document.getElementById("houseScore");
 
+let resultTxt = document.getElementById("result");
+
 var currentPlayer = 0;
 
 function chipSelect(evt) {
@@ -152,6 +154,7 @@ function startblackjack()
     hCard5.style.visibility = "hidden";
 
     dealBtn.style.visibility = "hidden";
+    resultTxt.style.visibility = "hidden";
     hitBtn.style.visibility = "visible";
     standBtn.style.visibility = "visible";
     isStarted = true;
@@ -308,6 +311,7 @@ function stand()
 
 function end()
 {
+    resultTxt.style.visibility = "visible";
     if (players[0].Points > players[1].Points && players[0].Points < 22 && players[1].Points < 22)
     {
         winnings = currentBet;
@@ -319,20 +323,30 @@ function end()
         {
             winnings = winnings * 2;
         }
+        resultTxt.innerHTML = " You Win! "
         
     }
     else if(players[1].Points > players[0].Points && players[1].Points < 22 && players[0].Points < 22){
         winnings = 0;
         winningsTxt.innerHTML = `${winnings}`;
+        resultTxt.innerHTML = " You Lose... "
     }
     else if(players[0].Points > 21)
     {
+        resultTxt.innerHTML = " You Lose... "
         winnings = 0;
         winningsTxt.innerHTML = `${winnings}`;
     }
     else if(players[1].Points > 21 || players[0].Points === players[1].Points)
     {
         winnings = currentBet;
+        if(players[1].Points > 21)
+        {
+            resultTxt.innerHTML = " You Win! "
+        }
+        else if(players[0].Points === players[1].Points){
+            resultTxt.innerHTML = " It's a Draw ";
+        }
     }
 
     bets.innerHTML = "0";
