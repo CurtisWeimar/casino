@@ -465,9 +465,30 @@ function resetGame() {
     dealBtn.innerHTML = "DEAL";
     reset = false;
     heldCards = 0;
-    console.log(`Old used cards length: ${usedCards.length}`);
     //Take all the cards from the current hand and discard them
         //In the grossest way possible
+    for(var i = 0; i < drawnCards.length; i++) {
+        console.log(drawnCards[i].held);
+        if(drawnCards[i].held) {
+            switch(i) {
+                case 1:
+                    card1.classList.toggle("card-active");
+                    break;
+                case 2:
+                    card2.classList.toggle("card-active");
+                    break;
+                case 3:
+                    card3.classList.toggle("card-active");
+                    break;
+                case 4:
+                    card4.classList.toggle("card-active");
+                    break;
+                case 5:
+                    card5.classList.toggle("card-active");
+                    break;
+            }
+        }
+    }
     drawnCards.forEach(card => usedCards.push(card));
     drawnCards.splice(0);
     // for(var i = 0; i < 5; i++) {
@@ -476,9 +497,8 @@ function resetGame() {
     //     drawnCards.splice(i, 1);
     // }
     console.log(`New used cards length: ${usedCards.length}`);
-    // resetDeck();
     currentBet = 0;
-    bets.innerHTML = 0; 
+    bets.innerHTML = 0;
 }
 
 function cardHold(evt) {
